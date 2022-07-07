@@ -1,0 +1,42 @@
+<ion-header [translucent]="true" role="banner">
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start" color="secondary">
+      <ion-icon size="large" name="logo-twitter"></ion-icon>
+    </ion-buttons>
+    <ion-title>Twitter</ion-title>
+  </ion-toolbar>
+    <ion-searchbar mode="ios" showCancelButton="focus"></ion-searchbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Registration</ion-card-subtitle>
+      <ion-card-title>Praktikum 3</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="floating">Nama Lengkap</ion-label>
+        <ion-input [(ngModel)]="info.fullname" type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input [(ngModel)]="info.email" type="email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating" type="email">Tanggal Lahir</ion-label>
+        <ion-datetime value="2019-10-01T15:43:40.394Z" [(ngModel)]="info.dob" display-timezone="utc"></ion-datetime>
+      </ion-item>
+        <ion-button color="success"(click)="saveData()" expand="block" mode="ios">Submit</ion-button>
+        <ion-button color="warning"(click)="scorePage()" expand="block" mode="ios">Page Score</ion-button>
+
+    </ion-card-content>
+
+  </ion-card>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="secondary">
+    <ion-title>Praktikum 3</ion-title>
+  </ion-toolbar>
+</ion-footer>
